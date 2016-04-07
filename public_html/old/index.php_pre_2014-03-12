@@ -1,0 +1,39 @@
+<?php include 'header.php';?>
+
+<h3>Next Meeting</h3>
+<p>
+<strong>Note time and location change!</strong> 
+The next meeting will be at <strong>Four Athens on Tuesday, 25 March, 
+2014 at 7 PM</strong>.  Please see the sidebar for more information.  
+</p>
+
+<h3>Local Linux Resources</h3>
+<ul>
+    <li><a href="http://www.freeitathens.org/">Free IT Athens</a></li>
+    <li><a href="ftp://linuxserv.uga.edu/pub/unix/linux">UGA Linux mirror site</a></li>
+    <li><a href="http://www.ale.org">Atlanta Linux Enthusiasts</a></li>
+</ul>
+
+      
+
+<h3>World Wide Linux links</h3>
+
+<ul>
+    <li><a href="http://www.linux.org/">Linux.org</a></li>
+    <li><a href="http://www.linux.com/">Linux.com</a></li>
+    <li><a href="http://www.southeastlinuxfest.org">southeastlinuxfest.org </a></li>
+    <li><a href="http://www.debianplanet.org">debianPlanet.org </a></li>
+    <li><a href="http://www.linuxppc.org">LinuxPPC.org </a></li>
+    
+    <li><a href="http://tldp.org/">Linux Documentation Project</a></li>
+    <li><a href="http://marketing.li.org/">Linux International</a></li>
+    
+    <li><a href="http://www.linuxapps.com/">linuxapps.com</a></li>
+    <li><a href="http://slashdot.org">slashdot.org</a></li>
+    <li><a href="http://freshmeat.net">freshmeat.net</a></li>
+    <li><a href="http://dir.yahoo.com/Computers_and_Internet/Software/Operating_Systems/Unix/Linux/">Yahoo's Linux Section</a></li>
+</ul>
+
+
+
+<?php include 'footer.php';?>

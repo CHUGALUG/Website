@@ -1,0 +1,3 @@
+#!/bin/sh
+. ../../ugawebhosting/wrappers/default_vars
+. ../../ugawebhosting/wrappers/default_script
