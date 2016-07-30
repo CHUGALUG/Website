@@ -1,0 +1,7 @@
+Redirect /chugalug/alf http://www.fcs.uga.edu/alf
+Redirect /~chugalug/alf http://www.fcs.uga.edu/alf
+
+RedirectPermanent /~chugalug/main.html http://www.uga.edu/chugalug/index.php
+RedirectPermanent /chugalug/main.html http://www.uga.edu/chugalug/index.php
+
+

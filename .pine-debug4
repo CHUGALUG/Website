@@ -1,0 +1,203 @@
+Debug output of the Pine program (at debug level 2).  Version 3.96
+Thu Jan  7 09:41:50 1999
+
+reading_pinerc "/usr/local/lib/pine.conf"
+Open failed: No such file or directory
+reading_pinerc "/usr/www/chugalug/.pinerc"
+Read 10354 characters:
+reading_pinerc "/usr/local/lib/pine.conf.fixed"
+Open failed: No such file or directory
+======= Current_val options set =======
+           inbox-path : inbox
+   folder-collections : mail/[]
+          default-fcc : sent-mail
+ default-saved-msg-fo : saved-messages
+     postponed-folder : postponed-msgs
+       mail-directory : mail
+       signature-file : .signature
+         address-book : .addressbook
+         feature-list : enable-aggregate-command-set
+  saved-msg-name-rule : default-folder
+        fcc-name-rule : default-fcc
+             sort-key : arrival
+   addrbook-sort-rule : fullname-with-lists-last
+ composer-wrap-column : 74
+  reply-indent-string : > 
+ empty-header-message : Undisclosed recipients
+ use-only-domain-name : no
+              printer : attached-to-ansi
+     standard-printer : lp
+ last-time-prune-ques : 99.1
+    last-version-used : 3.96
+        bugs-fullname : Pine Developers
+         bugs-address : pine-bugs@cac.washington.edu
+     suggest-fullname : Pine Developers
+      suggest-address : pine-suggestions@cac.washington.edu
+       local-fullname : Local Support
+        local-address : postmaster
+  kblock-passwd-count : 1
+       viewer-overlap : 2
+        scroll-margin : 0
+ status-message-delay : 0
+  mail-check-interval : 150
+       elm-style-save : no
+      header-in-reply : no
+        feature-level : sapling
+      old-style-reply : no
+       save-by-sender : no
+======= Command_line_val options set =======
+======= User_val options set (/usr/www/chugalug/.pinerc) =======
+         feature-list : enable-aggregate-command-set
+ last-time-prune-ques : 99.1
+    last-version-used : 3.96
+======= Global_val options set (/usr/local/lib/pine.conf) =======
+           inbox-path : inbox
+          default-fcc : sent-mail
+ default-saved-msg-fo : saved-messages
+     postponed-folder : postponed-msgs
+       mail-directory : mail
+       signature-file : .signature
+         address-book : .addressbook
+  saved-msg-name-rule : default-folder
+        fcc-name-rule : default-fcc
+             sort-key : arrival
+   addrbook-sort-rule : fullname-with-lists-last
+ composer-wrap-column : 74
+  reply-indent-string : > 
+ empty-header-message : Undisclosed recipients
+ use-only-domain-name : no
+              printer : attached-to-ansi
+     standard-printer : lp
+        bugs-fullname : Pine Developers
+         bugs-address : pine-bugs@cac.washington.edu
+     suggest-fullname : Pine Developers
+      suggest-address : pine-suggestions@cac.washington.edu
+       local-fullname : Local Support
+        local-address : postmaster
+  kblock-passwd-count : 1
+       viewer-overlap : 2
+        scroll-margin : 0
+ status-message-delay : 0
+  mail-check-interval : 150
+       elm-style-save : no
+      header-in-reply : no
+        feature-level : sapling
+      old-style-reply : no
+       save-by-sender : no
+======= Fixed_val options set (NO pine.conf.fixed) =======
+========== Feature settings ==========
+  no-allow-talk
+  no-assume-slow-link
+  no-auto-move-read-msgs
+  no-auto-open-next-unread
+  no-auto-zoom-after-select
+  no-auto-unzoom-after-apply
+  no-compose-cut-from-cursor
+  no-compose-maps-delete-key-to-ctrl-d
+  no-compose-rejects-unqualified-addrs
+  no-compose-send-offers-first-filter
+  no-compose-sets-newsgroup-without-confirm
+  no-delete-skips-deleted
+  no-disable-config-cmd
+  no-disable-default-in-bug-report
+  no-disable-busy-alarm
+  no-disable-keyboard-lock-cmd
+  no-disable-keymenu
+  no-disable-password-cmd
+  no-disable-update-cmd
+  no-disable-signature-edit-cmd
+  no-enable-8bit-esmtp-negotiation
+  no-enable-8bit-nntp-posting
+     enable-aggregate-command-set
+  no-enable-alternate-editor-cmd
+  no-enable-alternate-editor-implicitly
+  no-enable-background-sending
+  no-enable-bounce-cmd
+  no-enable-cruise-mode
+  no-enable-cruise-mode-delete
+  no-enable-dot-files
+  no-enable-dot-folders
+  no-enable-flag-cmd
+  no-enable-flag-screen-implicitly
+  no-enable-full-header-cmd
+  no-enable-goto-in-file-browser
+  no-enable-incoming-folders
+  no-enable-jump-shortcut
+  no-enable-mail-check-cue
+  no-enable-mouse-in-xterm
+  no-enable-newmail-in-xterm-icon
+  no-enable-suspend
+  no-enable-tab-completion
+  no-enable-unix-pipe-cmd
+  no-enable-verbose-smtp-posting
+  no-expanded-view-of-addressbooks
+  no-expanded-view-of-distribution-lists
+  no-expanded-view-of-folders
+  no-expunge-without-confirm
+  no-fcc-on-bounce
+  no-include-attachments-in-reply
+  no-include-header-in-reply
+  no-include-text-in-reply
+  no-news-approximates-new-status
+  no-news-post-without-validation
+  no-news-read-in-newsrc-order
+  no-pass-control-characters-as-is
+  no-preserve-start-stop-characters
+  no-print-offers-custom-cmd-prompt
+  no-print-includes-from-line
+  no-print-index-enabled
+  no-print-formfeed-between-messages
+  no-quell-dead-letter-on-cancel
+  no-quell-lock-failure-warnings
+  no-quell-status-message-beeping
+  no-quell-user-lookup-in-passwd-file
+  no-quit-without-confirm
+  no-reply-always-uses-reply-to
+  no-save-aggregates-copy-sequence
+  no-save-will-quote-leading-froms
+  no-save-will-not-delete
+  no-save-will-advance
+  no-select-without-confirm
+  no-show-cursor
+  no-show-selected-in-boldface
+  no-signature-at-bottom
+  no-single-column-folder-list
+  no-tab-visits-next-new-message-only
+  no-use-current-dir
+  no-use-function-keys
+  no-use-sender-not-x-sender
+  no-use-subshell-for-suspend
+Userid: chugalug
+Fullname: "WWW--CHUGALUG"
+User domain name being used ""
+Local Domain name being used "uga.edu"
+Host name being used "cousteau.uga.edu"
+Mail Domain name being used (by c-client too)"cousteau.uga.edu"
+---- write_pinerc ----
+Context mail/[] type: LOCAL
+new win size -----<24 80>------
+Terminal type: vt100
+Context mail/[] type: LOCAL
+About to open folder "INBOX"    inbox: "INBOX"
+Opened folder "/var/mail/chugalug" with 13 messages
+Sorting by Arrival
+IMAP 09:41:50 1/7 mm_log babble: Find of mailbox outside context: /usr/www/chugalug/.pine-interrupted-mail
+- mailcap_free -
+
+
+    ---- MAIN_MENU_SCREEN ----
+
+
+ ---- MAIL INDEX ----
+
+
+ ---- INDEX MANAGER ----
+MAIL_CMD: quit
+
+
+    ---- QUIT SCREEN ----
+Want_to read: y (121)
+expunge and close mail stream "/var/mail/chugalug"
+about to end_tty_driver
+- completely_done_with_adrbks -
+- mailcap_free -

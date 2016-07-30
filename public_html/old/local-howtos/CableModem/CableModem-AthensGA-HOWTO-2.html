@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Cable Modem Athens,GA HOWTO: Configuring a Linux workstation for @home</TITLE>
+</HEAD>
+<BODY>
+<A HREF="CableModem-AthensGA-HOWTO-3.html">Next</A>
+<A HREF="CableModem-AthensGA-HOWTO-1.html">Previous</A>
+<A HREF="CableModem-AthensGA-HOWTO.html#toc2">Contents</A>
+<HR>
+<H2><A NAME="s2">2. Configuring a Linux workstation for @home</A></H2>
+
+<H2><A NAME="ss2.1">2.1 DHCP</A>
+</H2>
+
+<P>@home uses DHCP for network configuration.  Put very simply, your
+computer sends out a network broadcast message asking for its
+network configuration.  The folks who run the @home network have
+a DHCP server that listens for requests and responds with an IP address
+and other configuration information such as gateway, netmask and
+nameservers that your machine will use as its configuration.
+<P>It is not absolutely necessary to configure your Linux box to use
+DHCP.  In practice @home addresses are statically assigned according to your
+"CI" number.  However, @home does not guarantee you a static assignment
+and reserves the right to change your address at anytime.
+<P>I recommend that you do use DHCP and I'll tell you how to
+configure that in the next section.
+<P>
+<H3>dhcpcd software</H3>
+
+<P>@home requires that you broadcast your "CI" number as your hostname in
+order to get an answer from their DHCP server(s).  Newer versions of
+the DHCP client for Linux can send this information.  Make sure
+you have an up to date version of dhcpcd.  I'm using the RPM package
+dhcpcd-1.3.16-0.i386.rpm that's part of the updates RedHat software
+has published to upgrade RedHat 5.2 to work with the 2.2 series
+kernels.  Localally, you can get a copy from linuxserv.uga.edu in the
+directory /pub/unix/linux/redhat/updates/5.2.
+<P>
+<H3>configuring dhcpcd</H3>
+
+<P>On a RedHat system use the network control-panel to setup a ethernet
+interface.  You want to set the "Interface contiguration protocol" to
+DHCP.
+<P>Next edit /etc/sysconfig/network-scripts/ifup.  Find the line that
+contains the dhcpcd command and insert a -h switch and your CI number
+that @home assigned you.  By default the dhcpcd program will not
+broadcast your hostname and so @home will not answer your request.
+The -h switch tells dhcpcd to send your CI number in its request.
+<P>Here's what that line looks like in my ifup file.
+<P>/sbin/dhcpcd -h ciXXXXXX  -c /etc/sysconfig/network-scripts/ifdhcpc-done ${DEVICE}
+<P>
+<P>
+<H2><A NAME="ss2.2">2.2 Proxy servers</A>
+</H2>
+
+<P>
+<P>@home provides proxy servers that you may use if you want to.  You
+should see better performance by using the @home proxies, but you also
+reveal to them which sites you vist.  I choose not to use the proxies
+and so haven't looked into setting them up under Linux.  If you would
+like to add information to this section, please let me know.
+<P>
+<H2><A NAME="ss2.3">2.3 Security </A>
+</H2>
+
+<P>You should consider the @home network and the Internet at large to be
+a hostile environment. Take precautions to protect yourself.  At a
+minimum, disable any network services you aren't actually using and
+install and configure TCP wrappers.
+<P>
+<HR>
+<A HREF="CableModem-AthensGA-HOWTO-3.html">Next</A>
+<A HREF="CableModem-AthensGA-HOWTO-1.html">Previous</A>
+<A HREF="CableModem-AthensGA-HOWTO.html#toc2">Contents</A>
+</BODY>
+</HTML>

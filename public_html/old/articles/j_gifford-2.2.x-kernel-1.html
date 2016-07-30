@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Going to Linux 2.2.x on Redhat 5.2...</title>
+</head>
+
+<body>
+<h1>Going to Linux 2.2.x on Redhat 5.2...</h1>
+by Jim Gifford<br>
+<a href="mailto:jim@GIFFORDS.NET">jim@GIFFORDS.NET</a><br>
+Mon, 8 Feb 1999<br>
+
+<p>
+<pre>
+I know I mentioned to some of you that I would let you know a basic
+"roadmap" of how to get from stock RH5.2 to RH5.2+2.2.x kernel.
+Well, there's no easy "just do this and things will be great" method
+that I'm aware of yet.
+
+Almost every component of the kernel has changed in some way.  Much
+of it in rather drastic ways.  Here's just a short list of things
+that bit me (primarily because I didn't read *ALL* the documentation
+in /usr/src/linux/Documentation):
+
+When bringing up an interface, the kernel now automatically adds
+a route for that network through that interface.  If your scripts
+do this as a seperate step (RH5.2 does) then you need to fix them.
+
+SMP:
+
+   Kernel 2.2.x has the wonderful ability to use the advanced PIC
+   chips (That's Programmable Interrupt Controller).  In the bad
+   days when Bill said "Let there be 640K", PC's only had 8 IRQ's,
+   numbered 0 to 7.  When IBM designed the AT (or maybe it was in
+   the XT, I forget), they added a second PIC.  The way a PIC works
+   is that IRQ lines on the bus are tied to one of the 8 inputs on
+   the PIC chip, and the output of the PIC chip is tied to the 1
+   IRQ line on the CPU.  With 2 PIC chips, we can have 15 total
+   IRQ's (yes, 15, not 16).  Basically, the second PIC chip is
+   "cascaded" by attaching it's output to the IRQ2 pin on the first
+   PIC.  Since there was direct access to IRQ 2 on the ISA bus in
+   the original design, and IRQ 2 was stolen for the cascade, IBM
+   tied IRQ 9 to the same line on the ISA bus that had been IRQ 2.
+   This is why you often see it referred to as IRQ 9/2.  Well, on
+   SMP based systems, Intel took things a step further.  They
+   designed into the MP specs a chip called the IO-APIC.  This is
+   one sweet chip.  It allows, among other things, remapping of
+   IRQ's.  Combine this with the fact that the PCI bus allows shared
+   IRQ's, and you end up with a really nice combination, that works
+   damned fast.  I think I now have something like 21 IRQ's.  By
+   default, this chip runs in "emulate two PIC chips" mode (similar
+   to x86 processors initializing at 8086 compatibility mode, aka
+   "real" mode).  "How did this bite you?" I hear you ask.  Well...
+   in the old kernel, there was PCI IRQ sharing.  In the new kernel,
+   there isn't.  I had to move one of my network cards to a different
+   PCI slot so it got a different IRQ assigned.  I also had to
+   diddle in the CMOS setup to set that flag that says "Reset ESCD
+   information" or something like that, to force the BIOS to reassign
+   PCI IRQ's.  From my /proc/interrupts:
+
+
+
+              CPU0       CPU1
+     0:   28625287   28935480    IO-APIC-edge  timer
+     1:     137064     137449    IO-APIC-edge  keyboard
+     2:          0          0          XT-PIC  cascade
+     5:       2141       2243    IO-APIC-edge  soundblaster
+     8:          0          1    IO-APIC-edge  rtc
+    12:     205153     201569    IO-APIC-edge  PS/2 Mouse
+    13:          1          0          XT-PIC  fpu
+    16:    1406684    1414411   IO-APIC-level  SMC EPIC/100
+    17:    2022971    2022747   IO-APIC-level  eth1
+    18:     249195     248681   IO-APIC-level  aic7xxx
+   NMI:          0
+   ERR:          0
+
+
+SMC EtherPower and EtherPower II:
+
+   There are still some bugs with these in an SMP based system.
+   Under Kernel 2.0.36, the EtherPower (using the Tulip driver)
+   was rock solid, and the EtherPower II (using the epic100 driver)
+   was in Beta (although once I got a good ethernet cable in use,
+   it was stable).  Under the new kernel, it appeared to be the
+   other way around.  In my system, I have both cards installed.
+   Prior to upgrade, the 10MB card was on the public net (routed
+   to the rest of the world), and the 100MB card was on the private
+   net (not routed at all).  Since the EtherPower II now *MUST* be
+   the first of the two initialized, it ends up being eth0, and so
+   now is my public net interface.  The determination of this
+   problem took some number of hours of investigation.  Basically,
+   if the epic100 driver initialize *after* either the Tulip or
+   de4x5 driver, it renders both inoperable.  If using modules,
+   simply rmmod of both and insmod in correct order makes things
+   work, so I think it is kernel structures getting stepped on by
+   the epic100 driver.  I have not (yet) reported this bug to the
+   kernel developers.
+
+MTRR:
+
+   From /usr/src/linux/Documentation/mtrr.txt:
+   >  On Intel Pentium Pro/Pentium II systems the Memory Type Range
+   >  Registers (MTRRs) may be used to control processor access to memory
+   >  ranges. This is most useful when you have a video (VGA) card on a
+   >  PCI or AGP bus. Enabling write-combining allows bus write transfers
+   >  to be combined into a larger transfer before bursting over the
+   >  PCI/AGP bus. This can increase performance of image write operations
+   >  2.5 times or more.
+
+   This is really sweet.  I *highly* recommend you read this if
+   you have a Pentium Pro or Pentium II system.  This bit me because
+   I enabled the feature in the kernel, and *didn't* configure it,
+   so my X was dog ass slow, especially doing window moving (it
+   reminded me of the days I ran X on a 386/33 with 8M of RAM).
+   I properly configured this, and now my X is much faster than it
+   ever was before.  From my /proc/mtrr:
+
+   reg00: base=0x00000000 (   0MB), size= 128MB: write-back, count=1
+   reg01: base=0xf8000000 (3968MB), size=   4MB: write-combining, count=1
+
+KMOD:
+
+   You no longer need kerneld, they replaced that with a more
+   generic method for the kernel to call back to userspace programs.
+   Read /usr/src/linux/Documentation/Changes.
+
+WindowMaker:
+
+   I broke the major rule of upgrades: "Never change more than one
+   variable at a time".  I upgraded my WindowMaker to 0.51.0 (from
+   0.20something) at the same time as I did my kernel upgrade.  I
+   blamed much of the slowdown in X on my kernel, when a good amount
+   of the blame can fall on WindowMaker.  However, the features
+   added far outweigh the slight slowing of certain things from
+   this upgrade.  I thing I'll also blame my video card.  *grin*
+
+NFS:
+
+   As I said at the last CHUGALUG meeting, NFS has changed
+   significantly.  For one thing, the kernel now knows things about
+   SUN RPC's.  There's proper locking, and I *think* even support
+   for NFS over TCP client *and* server.  In any case, I use my
+   Linux machine as an NFS client to a Solaris 2.5.1 server.  I
+   didn't tweak any of my usual settings
+   (nosuid,bg,intr,rsize=8192,wsize=8192), and things appear to be
+   *somewhat* faster.  Reads are an order of magnitude faster than
+   writes.  I'm not sure why writes are so slow, but I'll look into
+   it at some point.  As an example,
+
+   [1230] jim@pi:/var/tmp $ ls -l testfile
+   -rw-r--r--   1 jim      sysadmin  8318229 Feb  8 11:33 testfile
+   [1231] jim@pi:/var/tmp $ time mv testfile /home/jim/testfile
+   0.01user 1.27system 0:49.64elapsed 2%CPU (0avgtext+0avgdata 0maxresident)k
+   0inputs+0outputs (2112major+11minor)pagefaults 0swaps
+   [1232] jim@pi:/var/tmp $ time mv /home/jim/testfile testfile
+   0.01user 0.57system 0:00.77elapsed 74%CPU (0avgtext+0avgdata 0maxresident)k
+   0inputs+0outputs (81major+11minor)pagefaults 0swaps
+   [1233] jim@pi:/var/tmp $ time mv testfile /home/jim/testfile
+   0.01user 1.07system 0:50.87elapsed 2%CPU (0avgtext+0avgdata 0maxresident)k
+   0inputs+0outputs (2112major+11minor)pagefaults 0swaps
+   [1234] jim@pi:/var/tmp $ time mv /home/jim/testfile testfile
+   0.01user 0.58system 0:00.72elapsed 80%CPU (0avgtext+0avgdata 0maxresident)k
+   0inputs+0outputs (81major+11minor)pagefaults 0swaps
+
+   As you can see, ~50 seconds to write ~8M, and ~1 second to read
+   ~8M.  I personally don't think this is reasonable behavior, and
+   will eventually get around to finding out why it does this.
+   *shrug*  YMMV.
+
+SCSI:
+
+   Under 2.0.36, I could have a process streaming a 256Kbps .mp3
+   file to an icecast server (running on the same host), at the
+   same time that I had a process reading CDDA and 2 bladeenc
+   processes doing mp3 encoding (one at 256Kbps and the other at
+   128Kbps.  Obviously, this would keep my load avg rather high.
+   Under the 2.2.x kernel, The CDDA process and the Shout process
+   seem to want to run at a Real Time priority, and end up contending
+   for the SCSI bus.  On my AHA-2940, this results in frequent SCSI
+   transfer timeouts and SCSI bus resets.  The system continues
+   running, but all disk IO "freezes" during the SCSI bus reset.
+   My solution: run shout on another host.  The craziest part of
+   this is that shout was reading the .mp3 files via NFS.  Go
+   figure.
+
+
+I'm sure that as time goes on, these and other things will settle
+out into a wonderfully stable system, and I really love the snappiness
+of my new kernel.
+
+For those of you considering taking the plunge, here's my advice:
+
+Read *ALL* the files (and all of the Changes file) in
+/usr/src/linux/Documentation.  Visit http://www.linuxhq.com, and
+under the "New Stable Release" section, grab the 2.2.1 kernel (don't
+even *try* the 2.2.0 kernel), and read through the "Upgrading"
+links in that section.  As with anything, just jumping in with both
+feet without being adequately prepared is suicidal.  Take the time
+to learn about it *before* it breaks something that you missed.
+
+Hasta,
+jim
+</pre>
+
+
+
+<hr>
+<address></address>
+<!-- hhmts start -->
+Last modified: Mon Feb  8 13:51:55 EST 1999
+<!-- hhmts end -->
+</body> </html>

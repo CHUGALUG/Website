@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Cable Modem Athens,GA HOWTO: Other tips, tricks and trivia.</TITLE>
+</HEAD>
+<BODY>
+Next
+<A HREF="CableModem-AthensGA-HOWTO-4.html">Previous</A>
+<A HREF="CableModem-AthensGA-HOWTO.html#toc5">Contents</A>
+<HR>
+<H2><A NAME="s5">5. Other tips, tricks and trivia.</A></H2>
+
+<P>These are mostly snippets culled from the UGALINUX and AAH mailing
+lists.
+<P>
+<H2><A NAME="ss5.1">5.1 Jim Gifford reported the following on the cable modems:</A>
+</H2>
+
+<P>I've had this cable modem 2 weeks now.  I discovered the first day
+I had it that it had 2 IP addresses and MAC addresses of it's own.
+They are unassigned network addresses.  The HFC (Hybrid Fiber
+Copper) side has a 10.x.x.x address, and the Ethernet side has
+192.168.100.1.  Tonight, I thought it'd be cool to see if it answered
+to telnet.  Nope.  Then I checked port 80.  Y'all might be
+surprised/interested in what you can see about your cable modem
+this way.  Have fun.  I haven't yet done a portscan of mine, but
+it's interesting that this is here...  I suspect that it's got SNMP
+as well.  http://192.168.100.1/
+<P>
+<H2><A NAME="ss5.2">5.2 Mark Hazen reported on traffic filtered by @home:</A>
+</H2>
+
+<P>Surprise, surprise,... @home is filtering your inbound and outbound
+traffic. I got a response from the tech manager for this region today,
+regarding Micro$oft networking (i.e. SMB).... that's one of the 'many'
+services they filter out due to it's... how did he phrase it...
+'potential security problems and other issues'. I'm trying to get a list
+of exactly everything they filter.
+<P>Mark later recived email from an @home rep about this.  Here's the
+relavant excerpt:
+<P>Due to various Microsoft networking holes, we have blocked NetBios
+ports across our backbone. (137-139)
+Otherwise, users were able to access other user's harddrives and
+other networked resources, causing general havok, etc.
+<P>Mark has been asked by Intermedia our local cable company to:
+<P>"formulate a reponse to @home, to the effect of `Here's what we need
+to do, and why you should let us do it'"
+<P>
+<H2><A NAME="ss5.3">5.3 Jim again, this time on cable modems and MAC addresses:</A>
+</H2>
+
+<P>One thing I learned is that the cable
+modem learns your MAC address, so changing them around willy-nilly
+isn't a good idea.  Also, the cable modems are limited to only 4
+MAC addresses they can keep up with.
+<P>My recommendation is to actually power off the cable modem when
+you change your NIC.
+<H2><A NAME="ss5.4">5.4 Cable modems and power disconnects, reported by Darrell Golliher</A>
+</H2>
+
+<P>One of the @home tech's told me that the cable modems take longer to
+"sync" if they have been unplugged or have completely lost power.  If
+you merely turn them off with the power switch, the modem remembers
+what frequency its signal is supposed to be on.  I guess the point is
+that there is a difference between pulling the plug and flipping the
+switch on these modems.
+<P>
+<P>
+<HR>
+Next
+<A HREF="CableModem-AthensGA-HOWTO-4.html">Previous</A>
+<A HREF="CableModem-AthensGA-HOWTO.html#toc5">Contents</A>
+</BODY>
+</HTML>

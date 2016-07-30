@@ -1,0 +1,495 @@
+<HTML>
+<!-- $Id: reg_form.html,v 1.3 1998/03/02 20:48:42 wb8foz Exp $ RCS ID -->
+
+<HEAD><TITLE>Registration Form</TITLE></HEAD>
+<BODY bgcolor="ffffff">
+
+<P ALIGN=CENTER>
+<H2>Registration Form - Linux InstallFest </H2></P>
+
+<P>
+Please fill out this form completely. If you don't, evil things
+will happy to your installation!  It lets us know what kind of hardware is coming.
+<P>
+Filling out this form will force you to become intimate with
+your machine.  You will know a lot more about your machine after
+answering the following questions.  It will help you when you need
+to compile your kernel, or want to add some hardware. And most of
+all, it will help out if you have any problems during the install.
+<P>
+You might want to look at <A HREF="http://www.redhat.com/support/docs/hardware.html">
+Red Hat Hardware Compatibility Lists </A> if you have questions
+about the suitabilty of your hardware.
+<P>
+This form was inspired by and mostly copied from a similar form created by
+the Washington D.C. Linux Users Group.
+<FORM ACTION="http://www.coe.uga.edu/cgi-bin/cgiwrap/~golliher/cip.cgi"
+METHOD="POST">
+<HR>
+<BR>
+First Name <INPUT TYPE="text" NAME="first" SIZE=20>
+<BR>
+Last Name <INPUT TYPE="text" NAME="last" SIZE=35>
+<BR>
+Email Address <INPUT TYPE="text" NAME="email" SIZE=20>
+
+<BR>
+<HR>
+
+<BR>
+Choose Install:
+<SELECT NAME="install" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>New Red Hat Install
+<OPTION>Red Hat Upgrade
+<!--<OPTION>Non-Red Hat Install-->
+</SELECT>
+
+<BR>
+<HR>
+
+<BR>
+Choose Motherboard:
+<SELECT NAME="motherboard" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>AMI
+<OPTION>Amptron
+<OPTION>ASUS
+<OPTION>Compaq
+<OPTION>Dell
+<OPTION>Gigabyte
+<OPTION>IBM
+<OPTION>Intel
+<OPTION>Micronics
+<OPTION>M-Technology
+<OPTION>Packard Bell
+<OPTION>SuperMicro
+<OPTION>Soyo
+<OPTION>Tyan
+<OPTION>Sun or Clone
+<OPTION>Digital or clone
+<OPTION>Generic/Noname
+<OPTION>Other
+<OPTION>Don't Know
+</SELECT>
+
+<BR>
+<B>CPU:</B>
+
+<BR>
+Choose Type:
+<SELECT NAME="cputype" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>486sx, 386 (no floating point unit)
+<OPTION>386 (with floating point unit)
+<OPTION>486DX, 486DX2
+<OPTION>486DX4, AMD 5x86, Cyrix 486/5x86
+<OPTION>Intel Pentium, AMD K5, Cyrix/IBM 6x86/M2
+<OPTION>Pentium Pro, AMD K6, Cyrix M2
+<OPTION>SPARC
+<OPTION>Alpha AXP
+<OPTION>Other
+<OPTION>Don't Know
+</SELECT>
+
+<BR>
+Choose Brand:
+<SELECT NAME="cpubrand" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>Intel
+<OPTION>AMD/NexGen
+<OPTION>Cyrix/IBM
+<OPTION>Sun
+<OPTION>Digital
+<OPTION>Other
+<OPTION>Don't Know
+</SELECT>
+
+<BR>
+Choose Speed:
+<SELECT NAME="cpuspeed" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>Less than 33 MHz
+<OPTION>33
+<OPTION>40
+<OPTION>50
+<OPTION>60
+<OPTION>66
+<OPTION>75
+<OPTION>90
+<OPTION>100
+<OPTION>120
+<OPTION>133
+<OPTION>150
+<OPTION>166
+<OPTION>200
+<OPTION>Faster than 200 MHz
+<OPTION>Don't Know
+</SELECT>
+
+<BR>
+Choose Case Type:
+<SELECT NAME="cpucase" SIZE=1>
+<OPTION SELECTED>desktop
+<OPTION>minitower
+<OPTION>tower
+<OPTION>luggable
+<OPTION>laptop/notebook
+</SELECT>
+
+<BR>
+
+<HR>
+
+<BR>
+<B>Disks:</B>
+<BR>
+A:
+<SELECT NAME="diska" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>3.5 HD (1.44MB)
+<OPTION>5.25 HD (1.2MB)
+<OPTION>Other
+</SELECT>
+
+<BR>
+B:
+<SELECT NAME="diskb" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>3.5 HD (1.44MB)
+<OPTION>5.25 HD (1.2MB)
+<OPTION>Other
+</SELECT>
+
+<BR>
+C:
+<SELECT NAME="diskc" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>IDE
+<OPTION>SCSI
+<OPTION>Other
+</SELECT>
+Size (in MB) <INPUT TYPE="text" NAME="sizec" SIZE=5>
+
+<BR>
+D:
+<SELECT NAME="diskd" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>IDE
+<OPTION>SCSI
+<OPTION>Other
+</SELECT>
+Size (in MB) <INPUT TYPE="text" NAME="sized" SIZE=5>
+
+<BR>
+E:
+<SELECT NAME="diske" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>IDE
+<OPTION>SCSI
+<OPTION>Other
+</SELECT>
+Size (in MB) <INPUT TYPE="text" NAME="sizee" SIZE=5>
+
+<BR>
+F:
+<SELECT NAME="diskf" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>IDE
+<OPTION>SCSI
+<OPTION>Other
+</SELECT>
+Size (in MB) <INPUT TYPE="text" NAME="sizef" SIZE=5>
+
+<BR>
+We recommend 150MB minimum and 400MB for full featured Linux.
+<BR>
+Drive for Linux:
+<SELECT NAME="installdrive" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>C
+<OPTION>D
+<OPTION>E
+<OPTION>F
+</SELECT>
+Available Size (in MB) <INPUT TYPE="text" NAME="installsize" SIZE=5>
+
+<BR>
+<HR>
+
+<BR>
+<B>BUS:</B>
+
+<BR>
+Number of empty ISA Slots <INPUT TYPE="text" NAME="isa" SIZE=1>
+<BR>
+Number of empty EISA Slots <INPUT TYPE="text" NAME="eisa" SIZE=1>
+<BR>
+Number of empty VESA (VLB) Slots <INPUT TYPE="text" NAME="vesa" SIZE=1>
+<BR>
+Nunber of empty PCI Slots <INPUT TYPE="text" NAME="pci" SIZE=1>
+
+<BR>
+<HR>
+
+<BR>
+<B>MEMORY:</B>
+
+<BR>
+RAM (in MB) <INPUT TYPE="text" NAME="memory" SIZE=3> [8 minimum]
+
+<BR>
+<HR>
+
+<BR>
+<B>SCSI:</B>
+
+<BR>
+Choose Controller:
+<SELECT NAME="scsi" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>Adaptec 151x/152x/153x/154x/1640 (ISA)
+<OPTION>Adaptec 174x/274x (EISA)
+<OPTION>Adaptec 28xx (VESA)
+<OPTION>Adaptec 294x/394x/398x (PCI)
+<OPTION>Adaptec/Future Domain 292x (PCI)
+<OPTION>Allways IN2000 (ISA)
+<OPTION>AMD 53c974/79c974 (PCI)
+<OPTION>AMI (ISA)
+<OPTION>Buslogic (ISA)
+<OPTION>Buslogic (PCI)
+<OPTION>DTC 329x (ISA)
+<OPTION>EATA (ISA)
+<OPTION>Future Domain (ISA)
+<OPTION>NCR 5380/T130B (ISA)
+<OPTION>NCR 53c7xx (PCI)
+<OPTION>NCR 53c8xx (PCI)
+<OPTION>PAS 16 (ISA)
+<OPTION>Qlogic (ISA)
+<OPTION>Soundblaster/SCSI (ISA)
+<OPTION>Trantor T128/T128F/T228 (ISA)
+<OPTION>T130B (ISA)
+<OPTION>Ultrastor 14f,34f (ISA)
+<OPTION>Ultrastor 24x (PCI)
+<OPTION>WD 7000 (ISA)
+<OPTION>Other
+</SELECT>
+
+<BR>
+<HR>
+
+<BR>
+<B>CDROM:</B>
+
+<BR>
+Make & Model<INPUT TYPE="text" NAME="cdrom" SIZE=40>
+
+<BR>
+CDROM Type:
+<SELECT NAME="cdromtype" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>IDE
+<OPTION>SCSI
+<OPTION>SBPCD
+<OPTION>Other
+</SELECT>
+
+<BR>
+<HR>
+
+<BR>
+<B>PORTS:</B>
+
+<BR>
+Parallel 0x278 IRQ <INPUT TYPE="text" NAME="par1" SIZE=2>
+<BR>
+Parallel 0x378 IRQ <INPUT TYPE="text" NAME="par2" SIZE=2>
+<BR>
+Parallel 0x3BC IRQ <INPUT TYPE="text" NAME="par3" SIZE=2>
+<BR>
+Serial COM1 IRQ <INPUT TYPE="text" NAME="ser1" SIZE=2>
+<BR>
+Serial COM2 IRQ <INPUT TYPE="text" NAME="ser2" SIZE=2>
+<BR>
+Serial COM3 IRQ <INPUT TYPE="text" NAME="ser3" SIZE=2>
+<BR>
+Serial COM4 IRQ <INPUT TYPE="text" NAME="ser4" SIZE=2>
+
+<BR>
+<HR>
+
+<BR>
+<B>SOUNDBOARD:</B>
+
+<BR>
+Brand <INPUT TYPE="text" NAME="soundcard" SIZE=15>
+<BR>
+IO Address <INPUT TYPE="text" NAME="soundio" SIZE=5>
+<BR>
+IRQ <INPUT TYPE="text" NAME="soundirq" SIZE=2>
+
+<BR>
+<HR>
+
+<BR>
+<B>NETWORK CARD:</B>
+
+<BR>
+Choose Network Card:
+<SELECT NAME="network" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>3c503/16
+<OPTION>3c509
+<OPTION>3c590/3c90x
+<OPTION>AMD Lance/PCNET
+<OPTION>NE2000
+<OPTION>Intel EtherExpress (not recommended)
+<OPTION>SMC-Ultra/EtherEZ
+<OPTION>WD 80x3
+<OPTION>DEC 21x4x (Tulip)
+<OPTION>Other
+</SELECT>
+
+<BR>
+Choose Interface:
+<SELECT NAME="networktype" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>10BaseT/UTP/Twisted Pair (preferred)
+<OPTION>10Base5/BNC/Thin
+</SELECT>
+
+<BR>
+IRQ <INPUT TYPE="text" NAME="networkirq" SIZE=5>
+<BR>
+Base Address <INPUT TYPE="text" NAME="networkaddr" SIZE=5>
+
+<BR>
+<HR>
+
+<BR>
+<B>MONITOR:</B>
+
+<BR>
+Choose Monitor Size:
+<SELECT NAME="monitorsize" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>Smaller than 14"
+<OPTION>14 inches
+<OPTION>15 inches
+<OPTION>17 inches
+<OPTION>Bigger than 17"
+</SELECT>
+
+<BR>
+Brand of Monitor and serial number: <INPUT TYPE="text" NAME="monitorserial" SIZE=35>
+
+<BR>
+<BR>
+Horizontal refresh range (in KHz) (IMPORTANT!) <INPUT TYPE="text" NAME="horiz" SIZE=5>
+<BR>
+Vertical refresh range (in Hz) <INPUT TYPE="text" NAME="vert" SIZE=5>
+<BR>
+<HR>
+
+<BR>
+<B>VIDEO CARD:</B>
+
+<BR>
+Make & Model <INPUT TYPE="text" NAME="videocard" SIZE=40>
+
+<BR>
+Choose Video Chipset:
+<SELECT NAME="chipset" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>8514/A
+<OPTION>ATI March8/32/64
+<OPTION>Cirrus
+<OPTION>S3
+<OPTION>S3 Virge
+<OPTION>Western Digital
+<OPTION>IIT AGX-01x
+<OPTION>IBM
+<OPTION>XGA-2
+<OPTION>Tseng
+<OPTION>Paradise
+<OPTION>Genoa
+<OPTION>Trident
+<OPTION>NCR
+<OPTION>Compaq/AVGA
+<OPTION>OAK
+<OPTION>Advance Logic
+<OPTION>Chips&Technology
+<OPTION>MX
+<OPTION>Matrox/Compaq QVision (requires commercial driver)
+<OPTION>Video7
+<OPTION>ARK Logic
+<OPTION>RealTek
+<OPTION>Other
+</SELECT>
+
+<BR>
+Video Memory (in MB) <INPUT TYPE="text" NAME="videosize" SIZE=1>
+
+<BR>
+<HR>
+
+<BR>
+<B>MOUSE:</B>
+
+<BR>
+Choose Protocol:
+<SELECT NAME="mouse" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>MouseSystem
+<OPTION>Microsoft
+<OPTION>Logitech
+<OPTION>PS/2
+<OPTION>Other
+</SELECT>
+
+<BR>
+Choose Number of Buttons:
+<SELECT NAME="buttons" SIZE=1>
+<OPTION SELECTED> NONE
+<OPTION>1
+<OPTION>2
+<OPTION>3
+</SELECT>
+
+<BR>
+Choose Serial Port:
+<SELECT NAME="mouseser" SIZE=1>
+<OPTION SELECTED>NONE
+<OPTION>COM 1
+<OPTION>COM 2
+<OPTION>COM 3
+<OPTION>COM 4
+<OPTION>Busmouse
+</SELECT>
+
+<BR>
+I/O Address (optional) <INPUT TYPE="text" NAME="mouseio" SIZE=5>
+<BR>
+IRQ (optional) <INPUT TYPE="text" NAME="mouseirq" SIZE=2>
+
+<HR>
+<BR>
+
+<HR>
+Comments:<INPUT TYPE="text" NAME="comment" SIZE=60>
+<BR>
+<HR>
+<BR>
+<INPUT TYPE="submit" VALUE="Submit">
+<INPUT TYPE="reset"  VALUE="Cancel">
+</FORM>
+
+</BODY>
+</HTML>
+
+
+
+
+
+
+

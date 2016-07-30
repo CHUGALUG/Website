@@ -1,0 +1,82 @@
+<html> <head>
+<title>Alf '99v.10</title>
+</head>
+
+<body bgcolor=white link="red" vlink="black">
+<img src="BigBanner600.gif"><p>
+
+<table width=600>
+<tr>
+<td bgcolor="lightgrey" valign=top width=130>
+<!--#include virtual="/chugalug/alf99v1.0/nav.html"-->
+</td>
+
+<td valign=top width=470>
+<center>
+<font size=+1><b>Tell us what you thought of ALF!</b></font><br>
+We'll use your comments to have an even better event next time.  Let's hear your ideas and suggestions!
+<p>
+
+(this is for public comments.  private comments can be e-mailed
+to me at golliher@coe.uga.edu, please put "alf" in the subject line.)
+</center>
+<hr>
+
+<!--#include virtual="/chugalug/alf99v1.0/alf99v10_comments_data"-->
+<FORM method=post ACTION="/cgi-bin/guestbook.sh">
+
+<input type="hidden" Name="GBsub" Value="ALF_COMMENTS_99v10">
+<input type="hidden" Name="GBname" Value="Alf99v1.0 Comments">
+<input type="hidden" Name="GBurl" Value="/chugalug/alf99v1.0/comments-container.html">
+<!--
+   The "Value" here is in the form of a virtual URL.  Don't worry about
+   it if you don't know what that means.  Just replace <tt>test</tt> with your 
+   account name, followed by the path to and name of the file *from*
+   your <tt>public_html</tt> directory. Do not include
+   <tt>public_html</tt> in the path.
+-->
+<input type="hidden" Name="GBcon" Value="chugalug@www.uga.edu">
+<!--
+   This is an email address that can be used for someone to contact
+   you.  It can be the same as the address below (which is probably
+   the most common case).
+-->
+<input type="hidden" Name="GBrec" Value="chugalug@www.uga.edu">
+<!--
+   This is your email address on www.uga.edu.  The mail from this form
+   will be sent to this address and processed according to the rules
+   in your .procmailrc file.
+-->
+<!--
+   Leave these just as they are.  If you decide to change something, you
+   run the risk of messing up your GuestBook file.
+-->
+<b>Your Name:</b><br>
+
+<INPUT NAME="YourName" SIZE="50"><br>
+<br>
+<b>Your E-Mail address:</b><br>
+<INPUT NAME="Email" SIZE="50">
+<br>
+<b>Where are you from:</b><br>
+<INPUT NAME="City" SIZE="12"><br>
+<b>Comments:<br>
+<TEXTAREA NAME="Comments" ROWS=5 COLS=50 ></TEXTAREA>
+<br>
+<input type="submit" value="Submit comments">
+<input type="reset" value="Reset">
+</Form>
+
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+<address><!-- Created by Darrell Golliher - golliher@coe.uga.edu--></address>
+
+</body> </html>

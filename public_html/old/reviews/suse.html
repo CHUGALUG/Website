@@ -1,0 +1,236 @@
+<html>
+<head>
+<title>S.u.S.E. Linux v5.2  - A Review</title>
+</head>
+
+<body>
+<h1>S.u.S.E. Linux v5.2  - A Review</h1>
+<hr>
+<i>Presented to the Classic Hackers of the University of GeorgiA Linux Users' Group (CHUGALUG)
+<br>for the meeting of October 1998 by Rick Crelia (<a href="mailto:creliar@gactr.uga.edu">creliar@gactr.uga.edu</a>) </i></center>
+<p>
+<ul>
+<li><a href="#intro">Background and Introduction</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#install">Installation</a></li>
+<li><a href="#packages">Package smorgasbord</a></li>
+<li><a href="#kernel">Kernel issues</a></li>
+<li><a href="#post-install">Post-installation issues</a></li>
+<li><a href="#manual">The Manual</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+<p>
+<hr>
+<a name="intro"></a><h2>Background and Introduction</h2>
+S.u.S.E. Linux (pronounced <i>SOOS-A</i>, with the "A" being like the A in HAT) hails from the environs of Nuremberg, Germany. S.u.S.E. stands for something that translates to "Company for Software and System-Development" and was started as a consulting group for Unix software, not necessarily Linux. In 1993, S.u.S.E. distributed their first version of Linux, the SLS distribution. A year later, S.u.S.E. shipped SLS on CD, but called
+it S.u.S.E. 1.0. In 1996, the first original version of S.u.S.E. was shipped as version 4.2, based on S.u.S.E. newcomer Florian LaRoche's 
+Jurix distro of Linux. Jurix itself evolved from Slackware. The current version is 5.3 and shipped in late August of 1998.
+<p>
+S.u.S.E.'s international web site is at <a href="http://www.suse.com">http://www.suse.com</a>. The S.u.S.E. FAQ, from which I draw heavily in this introduction, is at <a href="http://www.suse.com/Support/Doku/FAQ/SuSE-Linux-E-FAQ.html">
+http://www.suse.com/Support/Doku/FAQ/SuSE-Linux-E-FAQ.html</a>
+<p>
+When you get S.u.S.E.'s full version package, you get a huge manual, 4 CDs (5 in 5.3), and 60 days of installation support via email, fax and/or phone. The manual is perhaps the best guide of any of the Linux distributions.
+<p><p>
+<a name="features"></a><h2>Features</h2>
+<ul>
+<li>v5.2 is based on libc5</li>
+<li>v5.3 is based on libc5 but has some support for glibc2 binaries</li>
+<li>v6.0 (Q4 98) will be based on glibc2</li>
+<p>
+<li>Currently available for Intel platform, Alpha port planned for v6.0</li>
+<p>
+<li>Excellent central administration and configuration tool, YaST (Yet another Setup Tool). Along with the SuSEConfig tool, it makes installation and maintenance a breeze for newbies and oldies alike! :-)</li>
+<p>
+<li>Since v5.0, S.u.S.E. uses RPM for package management. Both RPMs and TGZ packages can be installed using the YaST tool</li>
+<p>
+<li>susewm - maintain configurations of various window managers centrally</li>
+<p>
+<li>Specialized kernel in distribution to support more hardware and avoid known errors with device drivers.</li>
+<p>
+<li>Excellent documentation</li>
+</ul>
+<p>
+<a name="install"></a><h2>Installation </h2>
+<p>I had relatively few problems installing the 5.2 distro. My test machine is a Gateway P200, 64MB RAM, two EIDE HDs (2gb, 3gb),
+EIDE CDROM, Zip disk, ATI Rage II Pro graphics card, Ensoniq AudioPCI sound card, WinTV PCI video-capture/tuner card, Zoom
+56K Dual standard ISA modem, Orchid Righteous 3D 3Dfx card, and a SMC Ultra ISA network card. I did not try to get all of these
+components going.</p>
+
+<p>After booting with the Installation floppy and configuring my disk for the filesystems (one ext2fs and one swap), I noticed
+that my SMC card was not auto-detected. I used the setup program to manually load the SMC Ultra module and then everything was
+fine. Of course, my Ensoniq card was not found, even though a version of 4Front Technology's OSS Sound drivers were included
+in the distro. I soon found out that the included version of OSS only recognized cards made before 1997. Doh! Interestingly
+enough, my WinTV card was recognized (the Germans are fond of the Brooktree 8848 chipset on the WinTV for video apps) and
+the bttv driver was installed.
+</p>
+<p>The installation process was done using YaST. I am not a fan of GUI/curses based installation methods, but I must admit that
+YaST was very handy. It allowed me to easily adjust the target partitions for the install (I installed over top of a RH 5.1
+system) and re-format them prior to installing S.u.S.E. </p>
+<p>
+One of the nicest features of the setup was the degree of control over package selection. Using YaST, I was able to select additional packages over and above the base system. The YaST interface provides a description of each package on the same page as the selection field. I wish RedHat would follow their example at S.u.S.E. When I selected packages that required other yet-to-be-selected packages, I was informed and asked if I wanted it to automagically be done so I didn't have to remember what packages to install on another page.
+</p>
+<p>One gripe I have with YaST is that in some places during the install, it is not clear how to backtrack screens by section if possible at all. A couple of times I hit ESC thinking I would start from the beginning of the current section again - ack! Not so, on I went to the next section
+and I was not able to go back from there.</p>
+<p>
+I actually got prompted as to what kernel I wanted to install, based on the hard drive on my PC. The default (E)IDE kernel was the one I picked and it worked fine. Other choices reflected different types of SCSI controllers by and large. This is way cool. With RedHat, the SCSI and IDE kernel components are balled together in one kernel image (albeit most are modular components) until you recompile.  
+</p>
+<p>At this point, my selected packages were installed. Then, S.u.S.E. Linux was fired up without rebooting and I was prompted to setup Xwindows. I installed the Mach64 server for XFree86. I used the graphical version of XF86Config which led to me getting my X display setup right the very first try! I had encountered a similar experience when installing Caldera OpenLinux Standard 1.2 (will save that for the next review!). I love this method of setting up X. No having to manually edit the XF86Config file, tweaking mode lines, etc. I am running X on this box now in 1024x768 mode using 16bpp.
+</p>
+<p>After this, the install was complete and I rebooted after running LILO to tell my PC where to boot what from. The process took about 35 minutes.
+</p>
+
+<a name="packages"></a><h2>Package smorgasbord</h2>
+
+<p>As I've already noted, S.u.S.E. full distro includes LOTS of extra packages. Not just fluff n stuff either. I found many packages that I would normally go out to the Net and get, but instead had them on hand from the get-go. Here are some that I installed and some that I didn't but think are 
+noteworthy just the same:</p>
+
+<ul>
+<li>The entire Linux Documentation Project (LDP)</li>
+<li>The entire set of Internet RFCs</li>
+<li>The S.u.S.E. Support Database (database of problem reports and  solutions)</li>
+<li>The S.u.S.E. Manual</li>
+<li>WINE</li>
+<li>bttvgrab</li>
+<li>muscan (for Mustek scanners)</li>
+<li>KDE (alpha release pre-1.0 but stable)</li>
+<li>amanda (network backups)</li>
+<li>apache 1.2.5-4 (crufty and old)</li>
+<li>htdig (web site search software)</li>
+<li>majordomo</li>
+<li>mutt</li>
+<li>mirror</li>
+<li>mrtg (Multi Router Traffic Grapher)</li>
+<li>netatalk</li>
+<li>Radius client/server pkgs</li>
+<li>SAMBA (1.9.18p4-2)</li>
+<li>squid</li>
+<li>w3mir (web site mirroring tool)</li>
+<li>webalize (web site log analysis)</li>
+<li>weblint (HTML checker)</li>
+<li>wget (retrieve single/multiple web documents)</li>
+<li>OSS (commercial sound drivers)</li>
+<li>vnc (remote control of machines)</li>
+<li>mlvwm (Macintosh Lookalike WM)</li>
+<li>Enlightenment WM (early version..scary)</li>
+<li>Afterstep</li>
+<li>fvwm/fvwm95</li>
+</ul>
+<p>
+Also included were demo copies of Applixware, ADABAS DBMS, and other commercial products.
+</p>
+
+<a name="kernel"></a><h2>Kernel issues</h2>
+
+<p>The S.u.S.E. kernel apparently contains driver updates and bug fixes and so represents a modified version of the true Linux source tree.
+However, I found nothing odd or missing with the kernel. I recompiled the kernel just to see if I could...heh. Some interesting observations:
+</p>
+<ul>
+<li>by default, support for all radio equipment is turned ON (those  wacky Germans!)</li>
+<p>
+<li>includes Gigabit Ethernet drivers</li>
+</ul>
+<p>
+The kernel is 2.0.33 but I verified that an updated version (2.0.35) exists for downloading from the 
+<a href="ftp://ftp.suse.com/suse_update/kernel/linux-2.0.35-suse.tgz">S.u.S.E. ftp site</a>. 
+</p>
+<p>I removed all extraneous device support (SCSI in my case, Radio equipment, Token Ring and Arc Net support, 3Com NICs, ISDN, etc.)
+and recompiled the kernel. After installing the new image and re-running LILO, I booted into my customized version of S.u.S.E.
+without a hitch.</p>
+
+<a name="post-install"></a><h2>Post-installation issues</h2>
+
+<p>Since S.u.S.E. is derived from Slackware and is therefore more BSD-ish in its layout, I quickly discovered that the init scripts
+are all called from /etc/rc.config. Although I am accustomed to the RedHat way of doing things, I found myself easily able to
+transfer my experiences there to the S.u.S.E. method. In fact, the /etc/rc.d/init.d scripts are still used. However, they are
+located in /sbin/init.d instead with a symlink from /etc/rc.d. This is because S.u.S.E. follows the File System Standard (I 
+think that's the name...haven't been able to find the reference again) which dictates that no executable code can reside under 
+/etc.</p>
+
+<p>I did find a gotcha in the init script for apache. There is a test line at the beginning that checks to see if apache is booted
+at startup using /etc/rc.config. If the entry in rc.config for apache is set to NO for startup, then you cannot manually start
+and stop apache using</p>
+<pre>
+   /etc/rc.d/init.d/apache {stop|start|restart} 
+</pre>
+<p>as I am accustomed to. I commented out the test line in the apache init script and voila! I was able to manually start and
+stop apache using the init script. I had set it to NO in rc.config because this is a home machine and I didn't want to lose RAM on
+bootup for apache. I wanted to be able to turn it on and off as needed for testing.</p>
+
+<p>One important thing to note, and I'm not sure I like it, has to do with any changes you make to the system setup in /etc/rc.config.
+After doing so, you need to run /sbin/SuSEconfig which will then update configuration files and scripts. For example, if you
+manually change the network configuration in rc.config and let's say it affects the contents of /etc/resolv.conf, then you need
+to run SuSEconfig afterwards to update resolv.conf. This use of rc.config seems a little more trouble than it's worth given
+that I already know where I need to make most changes in the various config files. However, a newbie might not so this can
+be a useful facility. If you make all changes to system configuration using YaST, then SuSEconfig will be run automatically to update
+the configuration files.</p>
+
+<p>Another S.u.S.E. feature is related to Xwindows. There is a program called <i>susewm</i> which allows you to functionally replicate window manager configurations across multiple WMs. susewm is intelligent: it knows that one way to change a menu in KDE is not the same as it is in
+Afterstep. It is based on a set of several shell scripts and m4 macros as well as a database. By using susewm, you can spread your preferences
+across all installed window managers in one fell swoop. This is a very nice tool, especially for those of us who have inclinations
+toward running different window managers at various times. To keep up with updating the various configuration methods everytime you
+install a new application or menu would be much less possible without susewm. <i>Note: YMMV. I did not play with susewm that much.</i>
+</p>
+
+<a name="manual"></a><h2>The Manual</h2>
+
+<p>The cost of the full S.u.S.E. is almost justified for its manual alone. In addition to being a great reference, the manual also
+includes much theory and background info on various topics. There is a nice discussion of what Xwindows is and how it is designed so
+that you actually understand what you are doing with it and not just end up running a GUI for the sake of doing so. This should be 
+particularly helpful to new Linux users. There are occasional lapses in grammar throughout the manual, probably due to it being translated
+from German. However, I was able to make sense out of all such instances.</p>
+<p>
+The manual includes a section which explains all the options one encounters when re-compiling the kernel. This is an excellent reference for 
+anyone, new and old users.
+</p>
+
+<p>Here's a brief listing of the chapters from the table of contents:</p>
+<p>
+<ul>
+<li>Chapter 1  	Introduction</li>
+<li>Chapter 2	Support and Services of S.u.S.E</li>
+<li>Chapter 3	Installation</li>
+<li>Chapter 4 	YaST - Yet another Setup Tool</li>
+<li>Chapter 5	Updating the system and package management</li>
+<li>Chapter 6	Notebooks and PCMCIA cards 	</li>
+<li>Chapter 7	Kernel parameters	</li>
+<li>Chapter 8	LILO	</li>
+<li>Chapter 9	Printers	</li>
+<li>Chapter 10	Linux machines and hardware	</li>
+<li>Chapter 11	Special features of S.u.S.E. Linux	</li>
+<li>Chapter 12	The S.u.S.E. boot concept	</li>
+<li>Chapter 13	The kernel	</li>
+<li>Chapter 14 	The X Window System	</li>
+<li>Chapter 15	The windowmanager - window to your machine	</li>
+<li>Chapter 16	Networking Linux	</li>
+<li>Chapter 17	Connecting to the world: UUCP, SLIP and PPP	</li>
+<li>Chapter 18	Samba	</li>
+<li>Chapter 19	First steps with Linux	</li>
+<li>Chapter 20	Emulators 	</li>
+<li>Chapter 21	The vi editor	</li>
+<li>Chapter 22	emacs - more than just an editor	</li>
+<li>Chapter 23	Why Latex?	</li>
+<li>Appendix A	Important keys</li>
+<li>Appendix B	Glossary</li>
+<li>Appendix C	The directory tree</li>
+<li>Appendix D	Important files</li>
+<li>Appendix E	Manual page of e2fsck</li>
+<li>Appendix F	The GNU General Public License</li>
+</ul>
+</p>
+<a name="summary"></a><h2>Summary</h2>
+
+<p>S.u.S.E. Linux is a comprehensive and well-built Linux distribution that offers more than the average distro. In addition to some customized
+helpful tools like YaST and susewm geared toward new and veteran Linux users, S.u.S.E. offers many extra valuable packages. The manual that
+comes with S.u.S.E. is well-written, precise and quite informative for all levels of user. Add to this a handful of nice demo copies of
+popular commercial Linux applications (Applixware is a damn fine office suite), and you have a system that is full-featured as well
+as easy to install and maintain. S.u.S.E. is on the right track and will probably end up rivaling RedHat in popularity as far as major
+Linux distributions go. I give it two CR\LF's up!</p>
+
+<p><i>Rating: 9 out of 10  -  Get your copy today!!!</i></p>
+<p>
+<hr>
+<address>
+Published Thu Oct 29 10:34:26 1998
+</address>
+</body>
+</html>

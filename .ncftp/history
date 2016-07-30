@@ -1,0 +1,4 @@
+open -u spock.fcs.uga.edu
+cd www/images
+put reg*gif
+quit
