@@ -8,7 +8,7 @@ If you would like to help out during Free IT Athens' open hours (great fun and e
 <h3>This Month's Meeting</h3>
 <b>Regular Meeting</b>
 </br>
-Wed., 7 September., 2016, 8 - 9:30 PM
+Wed., 5 October., 2016, 8 - 9:30 PM
 </br>
 Everyone!
 <br></br>
