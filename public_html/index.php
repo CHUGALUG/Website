@@ -15,7 +15,8 @@ Wed., 4 January, 2017, 8 - 9:30 PM
 Everyone!
 <br></br>
 If you know about wireless security, come share your knowledge.
-If you don't, then come and learn!
+If you don't, then come and learn!  There will also be discussion
+of the <a href="https://openwireless.org/">OpenWireless Movement</a>.
 <br></br>
 <b>
 Frita Noob-Hour Topic:  Wireless Internet
