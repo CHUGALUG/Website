@@ -43,7 +43,7 @@ if (preg_match("#~chugalug/(.*)$#", $_SERVER['REQUEST_URI'], $matches)) {
             <td>	
 		<a href="https://twitter.com/ClassicHackers" class="twitter-follow-button" data-show-count="false">Follow @ClassicHackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> &nbsp;
-		<a href="http://facebook.com/groups/chugalug"><img src="https://www.facebookbrand.com/img/assets/asset.f.logo.lg.png" height=18px></a> <a href="http://facebook.com/groups/chugalug"><sup>Join Group</sup></a>
+		<a href="http://facebook.com/groups/chugalug"><img src="/graphics/FB-f-Logo__blue_29.png" height=18px></a> <a href="http://facebook.com/groups/chugalug"><sup>Join Group</sup></a>
             </td>
         </tr>
     </table>
