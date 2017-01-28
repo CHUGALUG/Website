@@ -8,18 +8,21 @@ Frita Noob-Hour presentations will occur before the CHUGALUG meeting, at 7 PM, a
 If you would like to help out during Free IT Athens' open hours (great fun and experience introducing new people to Linux!), you need only attend their very helpful and low-stress new volunteer orientation.  <a href="http://www.freeitathens.org/get_involved/">Click here to learn more about becoming a volunteer at Free IT Athens</a>.
 
 <h3>This Month's Meeting</h3>
-<b>Regular Meeting - Topic: Wireless Security</b>
+<b>Regular Meeting - Topic: Graphics</b>
 <br></br>
-Wed., 4 January, 2017, 8 - 9:30 PM
+Wed., 1 February, 2017, 8 - 9:30 PM
 </br>
 Everyone!
 <br></br>
-If you know about wireless security, come share your knowledge.
-If you don't, then come and learn!  There will also be discussion
-of the <a href="https://openwireless.org/">OpenWireless Movement</a>.
+There isn't a speaker or a specific format.  This is just a
+suggested topic based on the Noob-Hour before the meeting. 
+There are no requirements to stay on topic or to deviate
+from it.  If you know about 
+graphics capabilities in GNU/Linux, 
+come share your knowledge.  If you don't, then come and learn! 
 <br></br>
 <b>
-Frita Noob-Hour Topic:  Wireless Internet
+Frita Noob-Hour Topic:  Graphics
 </b>
 <br></br>
 <h3>General notes about meetings</h3>
