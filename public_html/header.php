@@ -86,7 +86,7 @@ if (preg_match("#~chugalug/(.*)$#", $_SERVER['REQUEST_URI'], $matches)) {
     <li><a href="http://www.linuxppc.org">LinuxPPC.org </a></li>
     
     <li><a href="http://tldp.org/">Linux Documentation Project</a></li>
-    <li><a href="http://marketing.li.org/">Linux International</a></li>
+    <li><a href="http://wiht.co/linux-primer">A Linux Primer</a></li>
     
     <li><a href="http://www.linuxapps.com/">linuxapps.com</a></li>
     <li><a href="https://www.rosehosting.com/blog">Linux Tutorials from RoseHosting.com</a></li>
