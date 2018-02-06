@@ -10,7 +10,7 @@ If you would like to help out during Free IT Athens' open hours (great fun and e
 <h3>This Month's Meeting</h3>
 <b>Regular Meeting - No Special Topic</b>
 <br></br>
-Wed., 3 January, 2018, 8 - 9:30 PM
+Wed., 7 February, 2018, 8 - 9:30 PM
 </br>
 Everyone!
 <br></br>
