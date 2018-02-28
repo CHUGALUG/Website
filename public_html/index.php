@@ -8,14 +8,32 @@ Frita Noob-Hour presentations sometimes occur a week or two before the CHUGALUG 
 If you would like to help out during Free IT Athens' open hours (great fun and experience introducing new people to Linux!), you need only attend their very helpful and low-stress new volunteer orientation.  <a href="http://www.freeitathens.org/get_involved/">Click here to learn more about becoming a volunteer at Free IT Athens</a>.
 
 <h3>This Month's Meeting</h3>
-<b>Regular Meeting - No Special Topic</b>
+<b>Functional SSH, the basics and beyond</b>
 <br></br>
-Wed., 7 February, 2018, 8 - 9:30 PM
+Wed., 7 March, 2018, 8 - 9:30 PM
 </br>
-Everyone!
+Bob Belnap
 <br></br>
-Come on out to chat about Linux!
-<br></br>
+<a href="https://en.wikipedia.org/wiki/Secure_Shell">ssh</a>
+ is one of the most useful tools in the linux  toolkit, but it is often not used to its full potential.  Bob will start with the basics, and move through to more advanced usage, focusing on the practical uses of ssh.  Including:
+
+<ul>
+<li> basic usage and configuration
+<li> key/agent management
+<li> port forwarding and proxying
+<li> remote execution and control
+</ul>
+
+This is targeted for people that have a basic knowledge of ssh, but veteran users might be surprised to find a new trick here and there.    Some things you may learn:
+
+<ul>
+<li> how to stop typing passwords
+<li> how to securely automate backups
+<li> how to circumvent annoying firewalls
+<li> how to speed up multiple persistent connections
+</ul>
+
+<!br><!/br>
 <h3>General notes about meetings</h3>
 Frita open hours are from 6-8 PM. Feel free to show up in that window if you want to check them out. The meeting opens at 8 PM, but actually begins at 8:15 (this allows the Frita staff to close down from open hours).  If there is a presentation, it will begin promptly at 8:15 and should take about an hour.  Questions during the presentation are encouraged.  The meeting ends at 9:30.
 <br></br>
