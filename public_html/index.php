@@ -6,6 +6,14 @@ Meetings occur on the first Wednesday of each month from 8-9:30 PM and are held 
 Frita Noob-Hour presentations sometimes occur a week or two before the CHUGALUG meeting, at 7 PM, at Free I. T. Athens.  They will last a half-hour to 45 minutes.  They will cover topics relevant to the CHUGALUG meeting, but are designed for those very new to the topics.
 <br></br>
 If you would like to help out during Free IT Athens' open hours (great fun and experience introducing new people to Linux!), you need only attend their very helpful and low-stress new volunteer orientation.  <a href="http://www.freeitathens.org/get_involved/">Click here to learn more about becoming a volunteer at Free IT Athens</a>.
+<br></br>
+<b>New! We're trying streaming.</b>
+Starting with this meeting, whenever we have a presentation, we will attempt to
+stream the presentation on YouTube.  This is a new thing for us, so we would 
+love it if you would try it out and give us feedback.
+<br>
+<a href="https://www.youtube.com/channel/UCQ0gPKgHpyBrmDqpzghllLg">
+Click here for the CHUGALUG YouTube channel.</a>
 
 <h3>This Month's Meeting</h3>
 <b>Functional SSH, the basics and beyond</b>
