@@ -2,28 +2,34 @@
 
 <div style="width:520px;">
 <br></br>
-<h2>Functional SSH, the basics and beyond</h2> 
+<h2>SSH Part two</h2> 
 Bob Belnap</br>
-<p>Date: Mar. 07, 2018, 8-9:30 PM</p>
+<p>Date: Jun. 06, 2018, 8-9:30 PM</p>
 </br>
-<a href="https://en.wikipedia.org/wiki/Secure_Shell">ssh</a>
- is one of the most useful tools in the linux  toolkit, but it is often not used to its full potential.  Bob will start with the basics, and move through to more advanced usage, focusing on the practical uses of ssh.  Including:
+Unfortunately, the youtube livesteam video is without sound, so is unavailable.  For reference, the slides used can be found at:
+</br>
+<p>
+<a href="http://burninate.org/ssh/">http://burninate.org/ssh/</a>
+</br>
+</p>
 
-<ul>
-<li> basic usage and configuration
-<li> key/agent management
-<li> port forwarding and proxying
-<li> remote execution and control
-</ul>
+The link about port forwarding is:  <a href="https://solitum.net/an-illustrated-guide-to-ssh-tunnels/">https://solitum.net/an-illustrated-guide-to-ssh-tunnels/</a></br>
 
-This is targeted for people that have a basic knowledge of ssh, but veteran users might be surprised to find a new trick here and there.    Some things you may learn:
+<p>
+Controlmaster multiplexing link is: <a href="https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Multiplexing">https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Multiplexing</a></br>
+</p>
 
-<ul>
-<li> how to stop typing passwords
-<li> how to securely automate backups
-<li> how to circumvent annoying firewalls
-<li> how to speed up multiple persistent connections
-</ul>
+
+<p>
+The additional software links are: </br></br>
+</p>
+
+<p>
+ansible - <a href="https://www.ansible.com/">https://www.ansible.com/</a></br>
+fabric - <a href="http://www.fabfile.org/">http://www.fabfile.org/</a></br>
+sshfs - <a href="https://github.com/libfuse/sshfs">https://github.com/libfuse/sshfs</a></br>
+sshuttle - <a href="https://github.com/sshuttle/sshuttle">https://github.com/sshuttle/sshuttle</a></br>
+</p>
 <br></br>
 </br>
 </td>

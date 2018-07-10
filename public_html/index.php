@@ -16,19 +16,40 @@ love it if you would try it out and give us feedback.
 Click here for the CHUGALUG YouTube channel.</a>
 
 <h3>This Month's Meeting</h3>
-<b>Functional SSH, continued...</b>
+<b>Source Code As Product</b>
 <br></br>
-Wed., 6 June, 2018, 8 - 9:30 PM
+Wed., 11 July, 2018, 8 - 9:30 PM
 </br>
-Bob Belnap
+Lachele Foley
 <br></br>
-<a href="meetings/2018-03-07.php">The last discussion</a> on
-<a href="https://en.wikipedia.org/wiki/Secure_Shell">ssh</a>
-was cut short, so Bob is back with round 2.  He'll go over some of the basics, and give some chance for discussion before covering ssh multiplexing, authorized_keys tricks, and more.
-<p>
-Content is intentionally light to leave room for lots of questions and discussion, so bring your questions and let's learn something about ssh!  
+Most folks are familiar with 
+<a href="https://en.wikipedia.org/wiki/Application_software">apps</a>
+and other types of 
+<a href="https://en.wikipedia.org/wiki/Software">software</a>.
+Some will also be familiar with 
+<a href="https://en.wikipedia.org/wiki/Application_programming_interface">
+application programming interfaces (APIs)</a>, 
+which facilitate the generation of new apps.
+For one of my big projects, though, the source code itself is the product.  
+The source does provide an API because it is built as a 
+<a href="https://en.wikipedia.org/wiki/Library_(computing)">software 
+library</a>, but the real star is the code itself.
+<br></br>
+In this talk, I'll spend a little time explaining why someone might 
+want to build source code as a product.  Then, I'll give an overview of
+the particular projects 
+(<a href="https://github.com/GLYCAM-Web/gems/tree/gems-dev">GEMS</a> and
+<a href="https://github.com/GLYCAM-Web/gmml/tree/gmml-dev">GMML</a>), 
+and show how we use them to build a website (see 
+<a href="https://dev.glycam.org/">development</a> and/or
+<a href="http://glycam.org/">production</a> versions).
+Finally, I'll spend some time talking about how hard it can be to
+undertake a project like this.  
+I'll also show how open source software, particularly
+GNU/Linux, fuels the entire endeavor.
 </p><p>
-We'll plan on streaming again, so drop by youtube if you can't make it in person.
+We'll plan on streaming again, so drop by 
+youtube if you can't make it in person.
 </p><!br><!/br>
 <h3>General notes about meetings</h3>
 Frita open hours are from 6-8 PM. Feel free to show up in that window if you want to check them out. The meeting opens at 8 PM, but actually begins at 8:15 (this allows the Frita staff to close down from open hours).  If there is a presentation, it will begin promptly at 8:15 and should take about an hour.  Questions during the presentation are encouraged.  The meeting ends at 9:30.
