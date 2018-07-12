@@ -2,14 +2,14 @@
 
 ## Redirect /index.php to /
 if ($_SERVER['REQUEST_URI'] == '/index.php') {
-    header('HTTP/1.1 301 Moved Permanently'); 
+    header('HTTP/1.1 301 Moved Permanently');
     header('Location: http://chugalug.uga.edu/');
     exit;
 }
 
 ## Redirect requests to /~chugalug to /chugalug
 if (preg_match("#~chugalug/(.*)$#", $_SERVER['REQUEST_URI'], $matches)) {
-    header('HTTP/1.1 301 Moved Permanently'); 
+    header('HTTP/1.1 301 Moved Permanently');
     header("Location: http://chugalug.uga.edu/{$matches[1]}");
     exit;
 }
@@ -40,14 +40,14 @@ if (preg_match("#~chugalug/(.*)$#", $_SERVER['REQUEST_URI'], $matches)) {
             <td>
                 <strong>Welcome Athens Linux Users!</strong>
             </td>
-            <td>	
+            <td>
 		<a href="https://twitter.com/ClassicHackers" class="twitter-follow-button" data-show-count="false">Follow @ClassicHackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> &nbsp;
 		<a href="http://facebook.com/groups/chugalug"><img src="/graphics/FB-f-Logo__blue_29.png" height=18px></a> <a href="http://facebook.com/groups/chugalug"><sup>Join Group</sup></a>
             </td>
         </tr>
     </table>
-    
+
     <hr />
 
 
@@ -75,7 +75,7 @@ if (preg_match("#~chugalug/(.*)$#", $_SERVER['REQUEST_URI'], $matches)) {
     <li><a href="http://www.ale.org">Atlanta Linux Enthusiasts</a></li>
 </ul>
 
-      
+
 
 <h3>World Wide Linux links</h3>
 
@@ -83,17 +83,10 @@ if (preg_match("#~chugalug/(.*)$#", $_SERVER['REQUEST_URI'], $matches)) {
     <li><a href="http://www.linux.org/">Linux.org</a></li>
     <li><a href="http://www.linux.com/">Linux.com</a></li>
     <li><a href="http://www.southeastlinuxfest.org">southeastlinuxfest.org </a></li>
-    <li><a href="http://www.linuxppc.org">LinuxPPC.org </a></li>
-    
     <li><a href="http://tldp.org/">Linux Documentation Project</a></li>
     <li><a href="http://wiht.co/linux-primer">A Linux Primer</a></li>
-    
-    <li><a href="http://www.linuxapps.com/">linuxapps.com</a></li>
     <li><a href="https://www.rosehosting.com/blog">Linux Tutorials from RoseHosting.com</a></li>
-    <li><a href="http://slashdot.org">slashdot.org</a></li>
-    <li><a href="http://freshmeat.net">freshmeat.net</a></li>
     <li><a href="https://thishosting.rocks/centos-vs-ubuntu-server/">CentOS vs Ubuntu comparison</a></li>
-    <li><a href="http://dir.yahoo.com/Computers_and_Internet/Software/Operating_Systems/Unix/Linux/">Yahoo's Linux Section</a></li>
 </ul>
 
 
